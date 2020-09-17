@@ -41,4 +41,40 @@ if player_location == "1, 2":
 
 
 
-          
+
+
+
+
+
+
+
+if player_location == "2, 1":
+    to_be_printed = what_direction(True, False, False, False)
+    print("You can travel: ", to_be_printed, "." )
+    player_input = input("Direction: ").capitalize()
+    if player_input == "N":
+        player_location = "2, 2"
+    else:
+        print("Not a valid direction!")
+
+if player_location == "2, 2":
+    to_be_printed = what_direction(False, False, True, True)
+    print("You can travel: ", to_be_printed, "." )
+    player_input = input("Direction: ").capitalize()
+    if player_input == "S":
+        player_location = "2, 1"
+    elif player_input == "W":
+        player_location = "1, 2"
+    else:
+        print("Not a valid direction!")
+
+if player_location == "2, 3":
+    to_be_printed = what_direction(False, True, False, True)
+    print("You can travel: ", to_be_printed, "." )
+    player_input = input("Direction: ").capitalize()
+    if player_input == "E":
+        player_location = "3, 3"
+    elif player_input == "W":
+        player_location == "1, 3"
+    else:
+        print("Not a valid direction!")
