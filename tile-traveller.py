@@ -3,17 +3,38 @@
 # 
 player_location = "1, 1"
 
-def what_direction(N, S, A, W):
+def what_direction(N, S, E, W):
     output = ""
     if N == True:
-        output = output +   "North "
+        output = output + "(N)orth "
+    if S == True:
+        output = output + "(S)outh"
+    if E == True:
+        output = output + "(E)ast"
+    if W == True:
+        output = output + "(W)est"
 
 
 if player_location == "1, 1":
     to_be_printed = what_direction(True, False, False, False)
     print("You can travel: ", to_be_printed, "." )
-    player_input = input("Direction: ")
-    if player_location
+    player_input = input("Direction: ").capitalize()
+    if player_input == "N":
+        player_location = "1, 2"
+    else:
+        print("Not a valid direction!")
+        player_input = input("Direction: ")
+if player_location == "1, 2":
+    to_be_printed = what_direction(True, False, False, False)
+    print("You can travel: ", to_be_printed, "." )
+    player_input = input("Direction: ").capitalize()
+    if player_input == "N":
+        player_location = "1, 2"
+    else:
+        print("Not a valid direction!")
+        player_input = input("Direction: ").capitalize()
+
+
 
 
 
